@@ -37,6 +37,21 @@ h1 {
     margin-bottom: 4px;
 }
 
+
+#projects h3,
+#projects h4,
+#projects h2 {
+    color: var(--accent-dark)
+}
+
+
+/* @media (min-width: 1000px) {
+    #projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+*/
+
+
 header img {
     width: 150px;
     height: auto;
@@ -59,9 +74,7 @@ nav ul {
     gap: 25px;
 }
 
-nav li {
-    margin-right: 25px;
-}
+
 
 nav a {
     color: whitesmoke;
@@ -74,13 +87,27 @@ nav a:hover {
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    
     gap: 20px;
-    background: rgba(255, 0, 0, 0.3);
+    background: rgba(205, 236, 249, 0.3);
     padding: 20px;
 }
+#projects {
+  
+  
+    background: rgba(205, 236, 249, 0.3);
+  
+    gap: 1em;
+}
 
+
+#career-aspirations {
+   
+
+    background: rgba(205, 236, 249, 0.3);
+  
+    gap: 1em;
+}
 main section {
     padding: var(--standard-gap);
 }
@@ -108,11 +135,18 @@ main section {
 }
 
 .project-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+   
+    grid-template-columns: 1fr;
     gap: 25px;
 }
-
+@media (min-width: 600px) {
+    .project-grid {
+    gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        
+        gap: 1em;
+    }}
 h2 {
     color: var(--accent-dark);
     border-bottom: 3px solid var(--accent-green);
