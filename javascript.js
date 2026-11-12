@@ -18,7 +18,7 @@ if (!prefersReducedMotion && typeof ScrollReveal === "function") {
         duration: 1000,
         easing: "ease-out",
         origin: "bottom",
-        reset: True,
+        reset: true,
         opacity: 0,
     });
 
