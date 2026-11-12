@@ -1,3 +1,4 @@
+/*AI enhancements to color pallete and additions for dark mode. page background, nav, project backgrounds alowing all aspects of webpage to repsond to theme color changes*/
 :root {
     --primary-bg: #f5f3ed;
     --primary-text: #3f414d;
@@ -5,7 +6,32 @@
     --accent-blue: #718f94;
     --accent-green: #90b494;
     --light-green: #bfc8ad;
+    --header-bg: var(--accent-dark);
+    --header-text: whitesmoke;
+    --nav-bg: #30354d;
+    --nav-link: #c7cadc;
+    --main-bg: rgba(205, 236, 249, 0.3);
+    --card-bg: whitesmoke;
+    --section-bg: rgba(205, 236, 249, 0.3);
     --standard-gap: 40px;
+    color-scheme: light;
+}
+/* AI help with dark mode*/
+body[data-theme="dark"] {
+    --primary-bg: #20232e;
+    --primary-text: #e4e6ed;
+    --accent-dark: #c7cadc;
+    --accent-blue: #9ab9bf;
+    --accent-green: #9fc5a3;
+    --light-green: #384239;
+    --header-bg: #171923;
+    --header-text: #f5f3ed;
+    --nav-bg: #30354d;
+    --nav-link: #e4e6ed;
+    --main-bg: #282c39;
+    --card-bg: #343847;
+    --section-bg: #303441;
+    color-scheme: dark;
 }
 
 * {
@@ -21,8 +47,8 @@ body {
 }
 
 header {
-    background-color: var(--accent-dark);
-    color: whitesmoke;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     padding: 30px;
     border-bottom: 6px solid var(--accent-green);
 }
@@ -44,14 +70,6 @@ h1 {
     color: var(--accent-dark)
 }
 
-
-/* @media (min-width: 1000px) {
-    #projects {
-        grid-template-columns: repeat(3, 1fr);
-    }
-*/
-
-
 header img {
     width: 150px;
     height: auto;
@@ -61,7 +79,7 @@ header img {
 }
 
 nav {
-    background-color: #30354d;
+    background-color: var(--nav-bg);
     padding: 10px;
     margin-top: 20px;
 }
@@ -75,36 +93,34 @@ nav ul {
 }
 
 
-
 nav a {
-    color: #c7cadc;
+    color: var(--nav-link);
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
-    color: #30354d;
+    color: var(--accent-green);
 }
 
 main {
     
     gap: 20px;
-    background: rgba(205, 236, 249, 0.3);
+    background: var(--main-bg);
     padding: 20px;
 }
 #projects {
   
   
-    background: rgba(205, 236, 249, 0.3);
+    background: var(--section-bg);
   
     gap: 1em;
 }
 
-
 #career-aspirations {
    
 
-    background: rgba(205, 236, 249, 0.3);
+    background: var(--section-bg);
   
     gap: 1em;
 }
@@ -122,7 +138,7 @@ main section {
 }
 
 #projects article {
-    background-color: whitesmoke;
+    background-color: var(--card-bg);
     padding: 25px;
     margin: 25px 0;
     border-left: 6px solid var(--accent-green);
@@ -160,4 +176,20 @@ main a {
 
 header #intro p {
     color: white;
+}
+
+#theme-toggle {
+    background: var(--card-bg);
+    border: 2px solid var(--accent-green);
+    border-radius: 4px;
+    color: var(--primary-text);
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+#theme-toggle:focus-visible {
+    outline: 3px solid var(--accent-green);
+    outline-offset: 3px;
 }
