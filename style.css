@@ -178,7 +178,7 @@ header #intro p {
     color: white;
 }
 
-#theme-toggle {
+#dark-mode {
     background: var(--card-bg);
     border: 2px solid var(--accent-green);
     border-radius: 4px;
@@ -189,7 +189,7 @@ header #intro p {
     padding: 8px 12px;
 }
 
-#theme-toggle:focus-visible {
+#dark-mode:focus-visible {
     outline: 3px solid var(--accent-green);
     outline-offset: 3px;
 }
