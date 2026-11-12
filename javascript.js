@@ -9,21 +9,22 @@ darkmode.addEventListener("click", () => {
     darkmode.setAttribute("aria-pressed", String(Dark));
     darkmode.textContent = Dark ? "Switch to light mode" : "Switch to dark mode";
 });
-
+/* Scroll Reveal*/
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (!prefersReducedMotion && typeof ScrollReveal === "function") {
     const reveal = ScrollReveal({
-        distance: "20px",
-        duration: 600,
+        distance: "30px",
+        duration: 1000,
         easing: "ease-out",
         origin: "bottom",
-        reset: false
+        reset: True,
+        opacity: 0,
     });
 
     reveal.reveal("main section > h2, main section > p, #projects article", {
-        interval: 100
+        interval: 150
     });
 } else if (!prefersReducedMotion) {
-    console.error("ScrollReveal did not load. Check the internet connection and CDN script URL.");
+    console.error("ScrollReveal Error.");
 }
